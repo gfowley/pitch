@@ -9,3 +9,8 @@
 
 # rspec failure tracking
 .rspec_status
+
+/samples/osc_triangle*
+/samples/osc_square*
+/samples/osc_sawtooth*
+
