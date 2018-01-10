@@ -50,6 +50,27 @@ module Iqeo
         alias_method :detect, :detect3
       end
 
+      REF_FREQ = 440.0
+      REF_INDEX  = 57
+      NOTE_NAMES = %w[ C C#/Db D D#/Eb E F F#/Gb G G#/Ab A A#/Bb B ]
+
+      Note = Struct.new( :freq, :pitch, :cents, :octave, :name ) do
+        def fullname
+          "#{name}#{octave}"
+        end
+      end
+
+      def self.note freq
+        index = ( Math.log2( freq / REF_FREQ ) * 12.0 ).round + REF_INDEX
+        Note.new(
+          freq,
+          pitch  = 2 ** ( ( index - REF_INDEX ) / 12.0 ) * REF_FREQ,
+          cents  = ( Math.log2( freq / pitch ) * 1200 ).round,
+          octave = index / NOTE_NAMES.count,
+          name   = NOTE_NAMES[index % NOTE_NAMES.count]
+        )
+      end
+
       def self.count_negative_zero_crossings pairs
         pairs.count do |previous,current|
           negative_zero_crossing? previous, current
@@ -77,4 +98,16 @@ module Iqeo
 
   end
 end
+
+include Iqeo::Pitch
+
+# freq = 285.305
+# note = Detector.note freq
+  # => #<struct Iqeo::Pitch::Detector::Note
+  #     freq=285.305,
+  #     pitch=293.6647679174076,
+  #     cents=-50,
+  #     octave=4,
+  #     name="D">
+# note.fullname # => "D4"
 
