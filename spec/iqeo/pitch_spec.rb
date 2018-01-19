@@ -9,4 +9,8 @@ RSpec.describe Iqeo::Pitch do
     expect{ Iqeo::Pitch::Detector }.to_not raise_error
   end
 
+  it "has a Note class" do
+    expect{ Iqeo::Pitch::Note }.to_not raise_error
+  end
+
 end
