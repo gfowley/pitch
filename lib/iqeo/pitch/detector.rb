@@ -1,6 +1,4 @@
-
-require 'yaml'
-require 'pry'
+# require 'yaml'
 
 module Iqeo
   module Pitch
@@ -78,7 +76,7 @@ module Iqeo
   end
 end
 
-include Iqeo::Pitch
+# include Iqeo::Pitch
 
 # freq = 285.305
 # note = Detector.note freq

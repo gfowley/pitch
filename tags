@@ -1,0 +1,22 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Detector	lib/iqeo/pitch/detector.rb	/^    class Detector$/;"	c	class:Iqeo.Pitch
+Iqeo	lib/iqeo/pitch/detector.rb	/^module Iqeo$/;"	m
+Iqeo	lib/iqeo/pitch/note.rb	/^module Iqeo$/;"	m
+Iqeo	lib/iqeo/pitch/version.rb	/^module Iqeo$/;"	m
+Pitch	lib/iqeo/pitch/detector.rb	/^  module Pitch$/;"	m	class:Iqeo
+Pitch	lib/iqeo/pitch/note.rb	/^  module Pitch$/;"	m	class:Iqeo
+Pitch	lib/iqeo/pitch/version.rb	/^  module Pitch$/;"	m	class:Iqeo
+count_negative_zero_crossings	lib/iqeo/pitch/detector.rb	/^      def self.count_negative_zero_crossings pairs$/;"	F	class:Iqeo.Pitch
+detect1	lib/iqeo/pitch/detector.rb	/^      def self.detect1 samples, rate: 44100$/;"	F	class:Iqeo.Pitch.Detector
+detect2	lib/iqeo/pitch/detector.rb	/^      def self.detect2 samples, rate:44100$/;"	F	class:Iqeo.Pitch.Detector
+detect3	lib/iqeo/pitch/detector.rb	/^      def self.detect3 samples, rate:44100$/;"	F	class:Iqeo.Pitch.Detector
+fullname	lib/iqeo/pitch/note.rb	/^      def fullname$/;"	f	class:Iqeo.Pitch
+negative_zero_crossing	lib/iqeo/pitch/detector.rb	/^      def self.negative_zero_crossing? previous, current$/;"	F	class:Iqeo.Pitch.trim_sample_pairs_to_negative_zero_crossings
+note	lib/iqeo/pitch/note.rb	/^    def self.note freq$/;"	F	class:Iqeo.Pitch
+sign	lib/iqeo/pitch/detector.rb	/^      def self.sign n$/;"	F	class:Iqeo.Pitch.trim_sample_pairs_to_negative_zero_crossings
+trim_sample_pairs_to_negative_zero_crossings	lib/iqeo/pitch/detector.rb	/^      def self.trim_sample_pairs_to_negative_zero_crossings pairs$/;"	F	class:Iqeo.Pitch

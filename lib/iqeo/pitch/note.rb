@@ -18,7 +18,7 @@ module Iqeo
         freq,
         pitch  = 2 ** ( ( index - REF_INDEX ) / 12.0 ) * REF_FREQ,
         cents  = ( Math.log2( freq / pitch ) * 1200 ).round,
-        octave = index / NOTE_NAMES.count,
+        octave = ( index / NOTE_NAMES.count ).floor,                  # .floor to make Opal return an integer
         name   = NOTE_NAMES[index % NOTE_NAMES.count]
       )
     end

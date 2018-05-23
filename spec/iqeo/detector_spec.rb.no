@@ -1,3 +1,19 @@
+require "iqeo/pitch"
+require 'yaml'
+
+# require 'native'
+# require 'nodejs'
+# Kernel.node_require :glob
+
+# require 'nodejs'
+# puts defined?(NodeJS)
+# require 'yaml'
+
+# module YAML
+#   def self.load_file path
+#     load_path path
+#   end
+# end
 
 RSpec.describe Iqeo::Pitch::Detector do
 

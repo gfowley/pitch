@@ -1,3 +1,4 @@
+require "iqeo/pitch"
 
 RSpec.describe Iqeo::Pitch::Note do
 

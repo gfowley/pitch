@@ -1,5 +1,7 @@
 source "https://rubygems.org"
 
-git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
-
 gemspec
+
+gem 'opal'      , git: 'https://github.com/opal/opal.git',       ref: 'fcc3f78'
+gem 'opal-rspec', git: 'https://github.com/opal/opal-rspec.git', ref: 'f3b28c3', submodules: true
+
