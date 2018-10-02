@@ -1,6 +1,8 @@
+#! /usr/bin/env opal
+
 require 'nodejs'
-puts defined?(NodeJS)
-require 'yaml'
+# puts defined?(NodeJS)
+require 'nodejs/yaml'
 
 module YAML
   def self.load_file path
