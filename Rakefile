@@ -3,12 +3,12 @@ Bundler.require
 
 require 'opal/rspec/rake_task'
 
-# WTF: setting env breaks opal-rspec: ENV["SPEC_OPTS"] = "--format doc --color"  
+# GF: setting env breaks opal-rspec: ENV["SPEC_OPTS"] = "--format doc --color"  
 Opal::RSpec::RakeTask.new(:default) do |server, task|
   server.append_path "lib"
   server.append_path "node_modules"
   task.runner = :node
-  # WTF: these should be default already...
+  # GF: override defaults of 'spec-opal'
   task.default_path = "spec"
   task.pattern = "spec/**/*_spec.rb"
 end
