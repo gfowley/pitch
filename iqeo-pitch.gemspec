@@ -35,7 +35,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rspec", "~> 3.0"
   # spec.add_development_dependency "pry-byebug"
   # spec.add_development_dependency "opal", "0.10.5"
-  spec.add_development_dependency "opal", "0.11.1"
+  spec.add_development_dependency "opal", "0.11.3"
   spec.add_development_dependency "opal-sprockets"
   spec.add_development_dependency "opal-rspec", "0.7.0.rc.2" # , "0.6.1"
   spec.add_development_dependency "therubyracer"
