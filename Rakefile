@@ -19,7 +19,7 @@ end
 
 #   desc "Detect pitch for a series of samples (see 'samples' dir)"
 #   task :series, [:series_name] do |t,args|
-#     require 'iqeo/pitch'
+#     require 'pitch'
 #     if args.series_name
 #       expected_pitch = args.series_name.split('_').last.to_f
 #       puts "Series: #{args.series_name} (expected pitch: #{expected_pitch})"
@@ -27,7 +27,7 @@ end
 #         ( File.basename(a,'.yaml').to_i - File.basename(b,'.yaml').to_i ) <=> 0
 #       end.each do |sample_filename|
 #         number = File.basename(sample_filename,'.yaml')
-#         pitch = Iqeo::Pitch::Detector.detect(YAML.load_file sample_filename)
+#         pitch = Pitch::Detector.detect(YAML.load_file sample_filename)
 #         puts "sample: #{number.to_s.ljust(5)} pitch: #{pitch.to_s.ljust(20)} error: #{(pitch == 0.0 ? 0.0 : pitch - expected_pitch).to_s.ljust(22)}"
 #       end
 #     else
