@@ -1,7 +1,7 @@
-require "iqeo/pitch"
+require "pitch"
 require 'json'
 
-RSpec.describe Iqeo::Pitch::Detector do
+RSpec.describe Pitch::Detector do
 
   RESULTS = {
     detect1: {
@@ -28,22 +28,22 @@ RSpec.describe Iqeo::Pitch::Detector do
 
     it "detects #{RESULTS[:detect1][:silent]} for silent samples" do
       samples = JSON.load File.read "samples/osc_sine_440/0.json"
-      expect( Iqeo::Pitch::Detector.detect1 samples ).to eq RESULTS[:detect1][:silent]
+      expect( Pitch::Detector.detect1 samples ).to eq RESULTS[:detect1][:silent]
     end
 
     it "detects #{RESULTS[:detect1][:silent_beginning]} (error: #{RESULTS[:detect1][:silent_beginning]-440}) for 440Hz samples with silent beginning" do
       samples = JSON.load File.read "samples/osc_sine_440/20.json"
-      expect( Iqeo::Pitch::Detector.detect1 samples ).to eq RESULTS[:detect1][:silent_beginning]
+      expect( Pitch::Detector.detect1 samples ).to eq RESULTS[:detect1][:silent_beginning]
     end
 
     it "detects #{RESULTS[:detect1][:full]} (error: #{RESULTS[:detect1][:full]-440}) for full 440Hz samples" do
       samples = JSON.load File.read "samples/osc_sine_440/100.json"
-      expect( Iqeo::Pitch::Detector.detect1 samples ).to eq RESULTS[:detect1][:full]
+      expect( Pitch::Detector.detect1 samples ).to eq RESULTS[:detect1][:full]
     end
 
     it "detects #{RESULTS[:detect1][:imperfect]} (error: #{RESULTS[:detect1][:imperfect]-440}) for imperfect 440Hz samples " do
       samples = JSON.load File.read "samples/osc_sine_440/112.json"
-      expect( Iqeo::Pitch::Detector.detect1 samples ).to eq RESULTS[:detect1][:imperfect]
+      expect( Pitch::Detector.detect1 samples ).to eq RESULTS[:detect1][:imperfect]
     end
 
   end
@@ -52,22 +52,22 @@ RSpec.describe Iqeo::Pitch::Detector do
 
     it "detects #{RESULTS[:detect2][:silent]} for silent samples" do
       samples = JSON.load File.read "samples/osc_sine_440/0.json"
-      expect( Iqeo::Pitch::Detector.detect2 samples ).to eq RESULTS[:detect2][:silent]
+      expect( Pitch::Detector.detect2 samples ).to eq RESULTS[:detect2][:silent]
     end
 
     it "detects #{RESULTS[:detect2][:silent_beginning]} (error: #{RESULTS[:detect2][:silent_beginning]-440}) for 440Hz samples with silent beginning" do
       samples = JSON.load File.read "samples/osc_sine_440/20.json"
-      expect( Iqeo::Pitch::Detector.detect2 samples ).to eq RESULTS[:detect2][:silent_beginning]
+      expect( Pitch::Detector.detect2 samples ).to eq RESULTS[:detect2][:silent_beginning]
     end
 
     it "detects #{RESULTS[:detect2][:full]} (error: #{RESULTS[:detect2][:full]-440}) for full 440Hz samples" do
       samples = JSON.load File.read "samples/osc_sine_440/100.json"
-      expect( Iqeo::Pitch::Detector.detect2 samples ).to eq RESULTS[:detect2][:full]
+      expect( Pitch::Detector.detect2 samples ).to eq RESULTS[:detect2][:full]
     end
 
     it "detects #{RESULTS[:detect2][:imperfect]} (error: #{RESULTS[:detect2][:imperfect]-440}) for imperfect 440Hz samples " do
       samples = JSON.load File.read "samples/osc_sine_440/112.json"
-      expect( Iqeo::Pitch::Detector.detect2 samples ).to eq RESULTS[:detect2][:imperfect]
+      expect( Pitch::Detector.detect2 samples ).to eq RESULTS[:detect2][:imperfect]
     end
 
   end
@@ -76,22 +76,22 @@ RSpec.describe Iqeo::Pitch::Detector do
 
     it "detects #{RESULTS[:detect3][:silent]} for silent samples" do
       samples = JSON.load File.read "samples/osc_sine_440/0.json"
-      expect( Iqeo::Pitch::Detector.detect3 samples ).to eq RESULTS[:detect3][:silent]
+      expect( Pitch::Detector.detect3 samples ).to eq RESULTS[:detect3][:silent]
     end
 
     it "detects #{RESULTS[:detect3][:silent_beginning]} (error: #{RESULTS[:detect3][:silent_beginning]-440}) for 440Hz samples with silent beginning" do
       samples = JSON.load File.read "samples/osc_sine_440/20.json"
-      expect( Iqeo::Pitch::Detector.detect3 samples ).to eq RESULTS[:detect3][:silent_beginning]
+      expect( Pitch::Detector.detect3 samples ).to eq RESULTS[:detect3][:silent_beginning]
     end
 
     it "detects #{RESULTS[:detect3][:full]} (error: #{RESULTS[:detect3][:full]-440}) for full 440Hz samples" do
       samples = JSON.load File.read "samples/osc_sine_440/100.json"
-      expect( Iqeo::Pitch::Detector.detect3 samples ).to eq RESULTS[:detect3][:full]
+      expect( Pitch::Detector.detect3 samples ).to eq RESULTS[:detect3][:full]
     end
 
     it "detects #{RESULTS[:detect3][:imperfect]} (error: #{RESULTS[:detect3][:imperfect]-440}) for imperfect 440Hz samples " do
       samples = JSON.load File.read "samples/osc_sine_440/112.json"
-      expect( Iqeo::Pitch::Detector.detect3 samples ).to eq RESULTS[:detect3][:imperfect]
+      expect( Pitch::Detector.detect3 samples ).to eq RESULTS[:detect3][:imperfect]
     end
 
   end

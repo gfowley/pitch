@@ -1,18 +1,17 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "iqeo/pitch/version"
+require "pitch/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "iqeo-pitch"
-  spec.version       = Iqeo::Pitch::VERSION
+  spec.name          = "pitch"
+  spec.version       = Pitch::VERSION
   spec.authors       = ["Gerard Fowley"]
   spec.email         = ["gerard.fowley@iqeo.net"]
 
   spec.summary       = "Detect pitch of Web Audio API Analyser Time Domain data"
-  # spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
-  spec.license       = "MIT"
+  spec.homepage      = "https://github.com/gfowley/pitch"
+  spec.license       = "LGPL"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
@@ -33,9 +32,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.16"
   spec.add_development_dependency "rake", "~> 12.1"
   spec.add_development_dependency "rspec", "~> 3.0"
-  # spec.add_development_dependency "pry-byebug"
-  # spec.add_development_dependency "opal", "0.10.5"
-  spec.add_development_dependency "opal", "0.11.3"
+  spec.add_development_dependency "opal", "~> 0.11.3"
   spec.add_development_dependency "opal-sprockets"
   spec.add_development_dependency "opal-rspec", "0.7.0.rc.2" # , "0.6.1"
   spec.add_development_dependency "therubyracer"

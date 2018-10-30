@@ -1,11 +1,11 @@
-require "iqeo/pitch"
+require "pitch"
 
-RSpec.describe Iqeo::Pitch::Note do
+RSpec.describe Pitch::Note do
 
   context "has attributes" do
 
     before(:all) do
-      @note = Iqeo::Pitch::Note.new(999.0,1000.0,10,3,"X")
+      @note = Pitch::Note.new(999.0,1000.0,10,3,"X")
     end
 
     it( "freq"     ) { expect( @note.freq     ).to eq 999.0  }
@@ -23,7 +23,7 @@ RSpec.describe Iqeo::Pitch::Note do
     context "exact 440.0Hz A4" do
 
       before(:all) do
-        @note = Iqeo::Pitch.note(440.0)
+        @note = Pitch.note(440.0)
       end
 
       it( "freq"     ) { expect( @note.freq     ).to eq 440.0 }
@@ -38,7 +38,7 @@ RSpec.describe Iqeo::Pitch::Note do
     context "very high detuned 265.17Hz C4" do
 
       before(:all) do
-        @note = Iqeo::Pitch.note(269.23)
+        @note = Pitch.note(269.23)
       end
 
       it( "freq"     ) { expect( @note.freq     ).to eq 269.23            }
@@ -53,7 +53,7 @@ RSpec.describe Iqeo::Pitch::Note do
     context "very low detuned 761.72Hz G5" do
 
       before(:all) do
-        @note = Iqeo::Pitch.note(761.72)
+        @note = Pitch.note(761.72)
       end
 
       it( "freq"     ) { expect( @note.freq     ).to eq 761.72            }
